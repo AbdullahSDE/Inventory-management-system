@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -29,7 +30,7 @@ body {
 }
 
 label {
-    color: #000;
+    color: #21053b;
     font-size: 2.3em;
     justify-content: center;
     display: flex;
@@ -39,7 +40,7 @@ label {
     transition: .5s ease-in-out;
 }
 
-input{
+input {
     width: 60%;
     height: 20px;
     background: #f7dede;
@@ -52,8 +53,9 @@ input{
     border-radius: 5px;
 }
 
-button{
-    width: 60%;
+button {
+    width: 40%;
+    cursor: pointer;
     height: 40px;
     margin: 10px auto;
     justify-content: center;
@@ -61,4 +63,41 @@ button{
     color: #fff;
     font-size: 1em;
     font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: .2s ease-in;
+    background: #4d3078;
 }
+
+button:hover {
+    background: #6e67c5;
+    color: rgb(216, 236, 252);
+}
+
+.login{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+
+.login label {
+    color: #21053b;
+    transform: scale(.6);
+}
+
+#chk:checked~.login {
+    transform: translateY(-500px);
+}
+
+#chk:checked~.login label {
+    transform: scale(1);
+}
+
+#chk:checked~.signup label {
+    transform: scale(.6);
+}
+
